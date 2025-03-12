@@ -15,5 +15,5 @@ jobs:
     - name: run commands
       run: |
          npm ci
-         npm run build:prod
+         npm run build
 
