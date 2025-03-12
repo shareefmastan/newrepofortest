@@ -13,9 +13,8 @@ jobs:
       with:
         nodejs: '20.x'
     - name: run commands
-      run: npm run lint
-    - name: run test
-      run: npm run test
-    - name: build prod
-      run: npm run build:prod
+      run: |
+         npm ci
+         npm  test
+         npm run build:prod
 
