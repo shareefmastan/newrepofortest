@@ -1,0 +1,21 @@
+name: sample pipeline
+on: workflow_dispatch
+
+env:
+  key:  value
+
+jobs:
+  build:
+    run_on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v4
+      with:
+        nodejs: '20.x'
+    - name: run commands
+      run: npm run lint
+    - name: run test
+      run: npm run test
+    - name: build prod
+      run: npm run build:prod
+
