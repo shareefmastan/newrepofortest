@@ -1,5 +1,7 @@
 name: sample pipeline
-on: workflow_dispatch
+on: 
+  push: 
+  workflow_dispatch:
 
 env:
   key:  value
@@ -13,7 +15,5 @@ jobs:
       with:
         nodejs: '20.x'
     - name: run commands
-      run: |
-         npm ci
-         npm run build
+      run: npm ci
 
